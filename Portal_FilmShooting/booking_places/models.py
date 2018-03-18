@@ -16,6 +16,7 @@ class Producer(models.Model):
     passport_validity = models.DateField(blank=True)
 
 class Production(models.Model):
+	producer = models.ForeignKey(Producer)
 	film = models.CharField(max_length=100)
 	director = models.CharField(max_length=100)
 	cinematographer = models.CharField(max_length=100)
