@@ -7,15 +7,19 @@ class ProducerForm(forms.ModelForm):
         model = Producer
         fields=['name','email','password','nationality','contact','production_house','production_house_add','local_agent','local_agent_add','passport_no','passport_validity']
         widgets = {
-            'passport_validity': DateInput(),
+            'passport_validity': forms.DateInput(),
         }
 
-class ProductionForm(forms.ModelForm):
+class ApplicationForm(forms.ModelForm):
+	"""Application Form"""
 	class Meta:
 		model=Production
-		fields=['film','director','cinematographer','art_director','script','shoot_timing','shoot_start','shoot_end','location']
+		fields=['producer','production_house','production_house_add','contact','local_line_producer','local_line_producer_add','film','director','cinematographer','art_director','script','shoot_timing','shoot_start','shoot_end','location']
 		widgets = {
-		    'shoot_start': DateInput(),
-		    'shoot_end':DateInput(),
-		    'shoot_timing':TimeInput(),
+		    'shoot_start': forms.DateInput(),
+		    'shoot_end':forms.DateInput(),
+		    'shoot_timing':forms.TimeInput(),
 		}
+		
+		
+			

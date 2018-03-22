@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from booking_places import views as booking_views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('application_form/',booking_views.application_form),
 ]
