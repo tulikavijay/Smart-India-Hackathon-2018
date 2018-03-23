@@ -12,45 +12,12 @@
     <link rel="stylesheet" href="{% static 'accounts/style.css' %}" type="text/css">
 
     <title>Project Manager</title>
-
   </head>
   <body>
     <br>
     <div class="container">
       <nav class="navbar navbar-inverse navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Project Manager</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          {% if user.is_authenticated %}
-            {% if user.profile.access == "Admin" %}
-              <div class="navbar-nav">
-                <a class="nav-item nav-link" href="{% url 'accounts:all_clients' %}">Edit Client</a>
-                <a class="nav-item nav-link" href="{% url 'accounts:all_employees' %}">Edit Employee</a>
-                <a class="nav-item nav-link" href="{% url 'accounts:logout_view' %}">Logout</a>
-              </div>
-            {% elif user.profile.access == "Client" %}
-              <div class="navbar-nav">
-                <a class="nav-item nav-link" href="{% url 'accounts:all_employees' %}">Edit Employee</a>
-                <a class="nav-item nav-link" href="{% url 'accounts:logout_view' %}">Logout</a>
-              </div>
-            {% elif user.profile.access == "Customer" %}
-              <div class="navbar-nav">
-                <a class="nav-item nav-link" href="{% url 'accounts:logout_view' %}">Logout</a>
-              </div>
-            {% else %}
-            <div class="navbar-nav">
-              <a class="nav-item nav-link" href="{% url 'accounts:logout_view' %}">Logout</a>
-            </div>
-            {% endif %}
-          {% else %}
-            <div class="navbar-nav">
-              <a class="nav-item nav-link" href="{% url 'accounts:login_view' %}">Login</a>
-              <a class="nav-item nav-link" href="{% url 'accounts:register' %}">Register</a>
-            </div>
-        {% endif %}
-  </div>
+        
 </nav>
     </div>
     <br>

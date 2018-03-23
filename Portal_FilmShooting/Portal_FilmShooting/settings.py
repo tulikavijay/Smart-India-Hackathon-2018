@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'booking_places',
-    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +121,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+TIME_INPUT_FORMATS = ('%I:%M %p',)
